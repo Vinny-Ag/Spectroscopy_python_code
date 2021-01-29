@@ -1,0 +1,6 @@
+The purpose of this document is to link all the pathways of the routines of calculations of interest within the code.
+
+Producing a Morse spectra
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+main file: generate_spectra.py
