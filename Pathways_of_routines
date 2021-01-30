@@ -4,3 +4,42 @@ Producing a Morse spectra
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 main file: generate_spectra.py
+
+function: line 92 compute_coupled_morse_absorption
+
+function: line 133 compute_morse_absorption
+    line 152: recognizes the useage of the FC_HARMONIC method from the input file
+    morse_oscs.compute_harmonic_FC_response_func()----->
+    spectrum=linear_spectrum.full_spectrum()----->
+    
+    
+#####################################
+
+main file: morse.py
+
+class: morse_list:
+
+    silf.morse_oscs = []  starts an empty set and is populated throughout the morse.py file
+    self.eff_gbom=gbom.gbom()--------------->
+    function: line 785 compute_harmonic_FC_response_func()
+        self.eff_gbom.calc_fc_response()------>
+        self.harmonic_fc_response_func()
+        
+#####################################
+ 
+main file: gbom.py
+
+class: gbom:
+
+    self.fc_response=np.zeros((1,1))
+    function: line348 calc_fc_response()
+        self.fc_response=franck_condon_response.compute_full_response_func()--------------->
+        self. (same as above but for absorption perameters)
+
+
+#####################################
+
+main file: franck_condon_response.py
+
+function line427: compute_full_response_func()
+    
