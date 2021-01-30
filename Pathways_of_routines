@@ -21,6 +21,8 @@ class: morse_list:
 
     silf.morse_oscs = []  starts an empty set and is populated throughout the morse.py file
     self.eff_gbom=gbom.gbom()--------------->
+    self.harmonic_fc_response_func=np.zeros((1,1),dtype=np.complex_)
+    
     function: line 785 compute_harmonic_FC_response_func()
         self.eff_gbom.calc_fc_response()------>
         self.harmonic_fc_response_func()
@@ -43,3 +45,10 @@ main file: franck_condon_response.py
 
 function line427: compute_full_response_func()
     
+
+
+#####################################
+
+main file: linear_spectrum.py
+
+function line 59: full_spectrum
